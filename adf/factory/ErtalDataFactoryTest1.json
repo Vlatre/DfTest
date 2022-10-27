@@ -1,0 +1,9 @@
+{
+	"name": "ErtalDataFactoryTest1",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "586d4615-8385-467e-a6b5-9e6d5885d3ea",
+		"tenantId": "3190c600-ebac-4585-aec8-1b5a597db4ab"
+	}
+}
