@@ -1,0 +1,11 @@
+{
+	"name": "AzureDataLakeStorage1",
+	"properties": {
+		"description": "test",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://ertalstorageaccount.dfs.core.windows.net/"
+		}
+	}
+}
