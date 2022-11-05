@@ -1,0 +1,9 @@
+{
+	"name": "vlatredftest",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e8d7cbdf-7760-4f54-85a6-713467f3ef97",
+		"tenantId": "5989ece0-f90e-40bf-9c79-1a7beccdb861"
+	}
+}
