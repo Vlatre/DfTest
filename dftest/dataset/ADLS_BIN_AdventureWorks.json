@@ -1,0 +1,24 @@
+{
+	"name": "ADLS_BIN_AdventureWorks",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Dftestdataloadstoragetest",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"entity": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "@{dataset().Entity}.csv",
+				"folderPath": "raw",
+				"fileSystem": "lakeroot"
+			}
+		}
+	}
+}
