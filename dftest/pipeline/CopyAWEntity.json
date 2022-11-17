@@ -38,7 +38,7 @@
 						"referenceName": "HTTP_BIN_AdventureWorks",
 						"type": "DatasetReference",
 						"parameters": {
-							"Entity": "@pipeline().parameters.entitiy"
+							"Entity": "@pipeline().parameters.entity"
 						}
 					}
 				],
@@ -47,7 +47,7 @@
 						"referenceName": "ADLS_BIN_AdventureWorks",
 						"type": "DatasetReference",
 						"parameters": {
-							"entity": "@pipeline().parameters.entitiy"
+							"entity": "@pipeline().parameters.entity"
 						}
 					}
 				]
