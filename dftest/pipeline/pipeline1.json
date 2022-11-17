@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
+				"name": "BuildDimProduct",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -23,7 +23,7 @@
 								"FileName": "Product.csv"
 							},
 							"ProductSubcategory": {
-								"FileName": "ProductSubCategory.csv"
+								"FileName": "ProductSubcategory.csv"
 							},
 							"ProductCategory": {
 								"FileName": "ProductCategory.csv"
