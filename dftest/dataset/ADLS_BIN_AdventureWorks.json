@@ -15,7 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@{dataset().Entity}.csv",
+				"fileName": "@{dataset().entity}.csv",
 				"folderPath": "raw",
 				"fileSystem": "lakeroot"
 			}
