@@ -1,0 +1,12 @@
+{
+	"name": "sandboxdb",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=sandboxvl.database.windows.net;initial catalog=sandboxdbvl;user id=fhruser",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQENCMDM0NEQzLURBOUItNDIyOC05QkNELTlFNzU2QkEzMUI5MF85MzgwZjMxMS1kNTY0LTRmNjktODc2NC1iMmZjMDJiNDYxZjUiDQp9"
+		}
+	}
+}
