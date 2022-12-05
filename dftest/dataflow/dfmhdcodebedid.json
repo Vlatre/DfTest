@@ -1,0 +1,66 @@
+{
+	"name": "dfmhdcodebedid",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "metadata",
+						"type": "LinkedServiceReference"
+					},
+					"name": "refMhcodeSource"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "metadata",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "mhCodeMhBedidx"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          mhcode_pat_fbk as string,",
+				"          mhcode_cd as string,",
+				"          mhcode_nm_ln1 as string,",
+				"          mhcode_nm_ln2 as string,",
+				"          mhcode_nm_ln3 as string,",
+				"          cre_user as string,",
+				"          cre_date as timestamp,",
+				"          mod_user as string,",
+				"          mod_date as timestamp",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'ref_mhd_code',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> refMhcodeSource",
+				"refMhcodeSource filter(equals(mhcode_pat_fbk, 'mhbedidx')) ~> mhCodeMhBedidx",
+				"mhCodeMhBedidx sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'VL_df_ref_bedidx',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: false,",
+				"     recreate: true,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+			]
+		}
+	}
+}
